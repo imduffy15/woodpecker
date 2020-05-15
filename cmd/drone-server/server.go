@@ -134,6 +134,14 @@ var flags = []cli.Flag{
 		Name:   "volume",
 	},
 	cli.StringSliceFlag{
+		EnvVar: "DRONE_ENVIRONMENT",
+		Name:   "environment",
+	},
+	cli.StringFlag{
+		EnvVar: "DRONE_DOCKER_CONFIG",
+		Name:   "docker-config",
+	},
+	cli.StringSliceFlag{
 		EnvVar: "DRONE_NETWORK",
 		Name:   "network",
 	},

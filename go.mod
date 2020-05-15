@@ -39,6 +39,7 @@ require (
 	github.com/mattn/go-sqlite3 v0.0.0-20170901084005-05548ff55570
 	github.com/mrjones/oauth v0.0.0-20160405235802-31f1e8e5addd
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
+	github.com/opencontainers/runc v0.1.1 // indirect
 	github.com/prometheus/client_golang v0.9.1
 	github.com/prometheus/client_model v0.0.0-20190129233127-fd36f4220a90 // indirect
 	github.com/prometheus/common v0.4.1 // indirect

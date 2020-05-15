@@ -43,6 +43,8 @@ build-server:
 build-frontend:
 	(cd web/; yarn run build)
 
+build-release:
+	$(DOCKER_RUN) ./.drone.sh
 
 build: build-agent build-server
 
