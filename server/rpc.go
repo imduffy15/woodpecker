@@ -100,7 +100,7 @@ type RPC struct {
 
 // Next implements the rpc.Next function
 func (s *RPC) Next(c context.Context, filter rpc.Filter) (*rpc.Pipeline, error) {
-	metadata, ok := metadata.FromContext(c)
+	metadata, ok := metadata.FromIncomingContext(c)
 	if ok {
 		hostname, ok := metadata["hostname"]
 		if ok && len(hostname) != 0 {
@@ -165,7 +165,7 @@ func (s *RPC) Update(c context.Context, id string, state rpc.State) error {
 		return err
 	}
 
-	metadata, ok := metadata.FromContext(c)
+	metadata, ok := metadata.FromIncomingContext(c)
 	if ok {
 		hostname, ok := metadata["hostname"]
 		if ok && len(hostname) != 0 {
@@ -285,7 +285,7 @@ func (s *RPC) Init(c context.Context, id string, state rpc.State) error {
 		log.Printf("error: cannot find proc with id %d: %s", procID, err)
 		return err
 	}
-	metadata, ok := metadata.FromContext(c)
+	metadata, ok := metadata.FromIncomingContext(c)
 	if ok {
 		hostname, ok := metadata["hostname"]
 		if ok && len(hostname) != 0 {

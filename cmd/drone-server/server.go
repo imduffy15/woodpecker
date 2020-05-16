@@ -720,7 +720,7 @@ func (a *authorizer) unaryIntercaptor(ctx oldcontext.Context, req interface{}, i
 }
 
 func (a *authorizer) authorize(ctx context.Context) error {
-	if md, ok := metadata.FromContext(ctx); ok {
+	if md, ok := metadata.FromIncomingContext(ctx); ok {
 		if len(md["password"]) > 0 && md["password"][0] == a.password {
 			return nil
 		}

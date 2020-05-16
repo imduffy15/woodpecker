@@ -25,7 +25,7 @@ require (
 	github.com/gin-gonic/gin v0.0.0-20160130002857-3d002e382355
 	github.com/go-sql-driver/mysql v1.3.0
 	github.com/gogits/go-gogs-client v0.0.0-20160212212711-d584b1e0fb4d
-	github.com/golang/protobuf v1.3.1
+	github.com/golang/protobuf v1.3.3
 	github.com/google/go-github v0.0.0-20151120211125-47f2593dad19
 	github.com/google/go-querystring v0.0.0-20140906084135-d8840cbb2baa // indirect
 	github.com/gorilla/securecookie v0.0.0-20140409111100-1b0c7f6e9ab3
@@ -41,7 +41,6 @@ require (
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
 	github.com/opencontainers/runc v0.1.1 // indirect
 	github.com/prometheus/client_golang v0.9.1
-	github.com/prometheus/client_model v0.0.0-20190129233127-fd36f4220a90 // indirect
 	github.com/prometheus/common v0.4.1 // indirect
 	github.com/prometheus/procfs v0.0.1 // indirect
 	github.com/rs/zerolog v0.0.0-20170911215232-9d194eb6f50e
@@ -50,13 +49,12 @@ require (
 	github.com/stretchr/testify v1.3.0
 	github.com/tevino/abool v0.0.0-20160628101133-3c25f2fe7cd0
 	github.com/urfave/cli v0.0.0-20190203184040-693af58b4d51
-	golang.org/x/crypto v0.0.0-20180904163835-0709b304e793
-	golang.org/x/net v0.0.0-20181114220301-adae6a3d119a
-	golang.org/x/oauth2 v0.0.0-20160121061903-8a57ed94ffd4
-	golang.org/x/sync v0.0.0-20181221193216-37e7f081c4d4
+	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
+	golang.org/x/net v0.0.0-20190311183353-d8887717615a
+	golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be
+	golang.org/x/sync v0.0.0-20190423024810-112230192c58
 	google.golang.org/appengine v1.5.0 // indirect
-	google.golang.org/genproto v0.0.0-20170531203552-aa2eb687b4d3 // indirect
-	google.golang.org/grpc v0.0.0-20170626232044-9cb02b885b41
+	google.golang.org/grpc v1.29.1
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v8 v8.17.1 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20191107175235-0b070bb63a18
