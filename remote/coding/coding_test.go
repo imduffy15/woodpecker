@@ -290,7 +290,7 @@ var (
 	}
 
 	fakeRepos = []*model.RepoLite{
-		&model.RepoLite{
+		{
 			Owner:    "demo1",
 			Name:     "test1",
 			FullName: "demo1/test1",

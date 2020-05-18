@@ -22,7 +22,7 @@ func (cf *configFetcher) Fetch() ([]*remote.FileMeta, error) {
 			// either a file
 			file, fileerr := cf.remote_.File(cf.user, cf.repo, cf.build, cf.repo.Config)
 			if fileerr == nil {
-				return []*remote.FileMeta{&remote.FileMeta{
+				return []*remote.FileMeta{{
 					Name: cf.repo.Config,
 					Data: file,
 				}}, nil
@@ -43,7 +43,7 @@ func (cf *configFetcher) Fetch() ([]*remote.FileMeta, error) {
 				return nil, fileerr
 			}
 
-			return []*remote.FileMeta{&remote.FileMeta{
+			return []*remote.FileMeta{{
 				Name: cf.repo.Config,
 				Data: file,
 			}}, nil
