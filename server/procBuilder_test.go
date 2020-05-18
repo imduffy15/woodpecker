@@ -37,13 +37,13 @@ bbb`,
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   xxx:
     image: scratch
     yyy: ${DRONE_COMMIT_MESSAGE}
 `)},
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   build:
     image: scratch
@@ -70,12 +70,12 @@ func TestMultiPipeline(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   xxx:
     image: scratch
 `)},
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   build:
     image: scratch
@@ -104,17 +104,17 @@ func TestDependsOn(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Name: "lint", Data: []byte(`
+			{Name: "lint", Data: []byte(`
 pipeline:
   build:
     image: scratch
 `)},
-			&remote.FileMeta{Name: "test", Data: []byte(`
+			{Name: "test", Data: []byte(`
 pipeline:
   build:
     image: scratch
 `)},
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   deploy:
     image: scratch
@@ -150,7 +150,7 @@ func TestRunsOn(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   deploy:
     image: scratch
@@ -186,13 +186,13 @@ func TestBranchFilter(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   xxx:
     image: scratch
 branches: master
 `)},
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   build:
     image: scratch
@@ -234,7 +234,7 @@ func TestZeroSteps(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 skip_clone: true
 pipeline:
   build:
@@ -268,7 +268,7 @@ func TestZeroStepsAsMultiPipelineDeps(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Name: "zerostep", Data: []byte(`
+			{Name: "zerostep", Data: []byte(`
 skip_clone: true
 pipeline:
   build:
@@ -276,12 +276,12 @@ pipeline:
       branch: notdev
     image: scratch
 `)},
-			&remote.FileMeta{Name: "justastep", Data: []byte(`
+			{Name: "justastep", Data: []byte(`
 pipeline:
   build:
     image: scratch
 `)},
-			&remote.FileMeta{Name: "shouldbefiltered", Data: []byte(`
+			{Name: "shouldbefiltered", Data: []byte(`
 pipeline:
   build:
     image: scratch
@@ -316,7 +316,7 @@ func TestZeroStepsAsMultiPipelineTransitiveDeps(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Name: "zerostep", Data: []byte(`
+			{Name: "zerostep", Data: []byte(`
 skip_clone: true
 pipeline:
   build:
@@ -324,18 +324,18 @@ pipeline:
       branch: notdev
     image: scratch
 `)},
-			&remote.FileMeta{Name: "justastep", Data: []byte(`
+			{Name: "justastep", Data: []byte(`
 pipeline:
   build:
     image: scratch
 `)},
-			&remote.FileMeta{Name: "shouldbefiltered", Data: []byte(`
+			{Name: "shouldbefiltered", Data: []byte(`
 pipeline:
   build:
     image: scratch
 depends_on: [ zerostep ]
 `)},
-			&remote.FileMeta{Name: "shouldbefilteredtoo", Data: []byte(`
+			{Name: "shouldbefilteredtoo", Data: []byte(`
 pipeline:
   build:
     image: scratch
@@ -370,7 +370,7 @@ func TestTree(t *testing.T) {
 		Regs:  []*model.Registry{},
 		Link:  "",
 		Yamls: []*remote.FileMeta{
-			&remote.FileMeta{Data: []byte(`
+			{Data: []byte(`
 pipeline:
   build:
     image: scratch
