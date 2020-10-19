@@ -28,7 +28,7 @@ require (
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/gogits/go-gogs-client v0.0.0-20160212212711-d584b1e0fb4d
-	github.com/golang/protobuf v1.4.2
+	github.com/golang/protobuf v1.4.3
 	github.com/google/go-cmp v0.4.1 // indirect
 	github.com/google/go-github v0.0.0-20151120211125-47f2593dad19
 	github.com/google/go-querystring v1.0.0 // indirect
