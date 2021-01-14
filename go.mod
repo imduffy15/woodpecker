@@ -58,7 +58,7 @@ require (
 	github.com/sirupsen/logrus v1.6.0
 	github.com/sourcegraph/jsonrpc2 v0.0.0-20200429184054-15c2290dcb37
 	github.com/stretchr/objx v0.2.0 // indirect
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.7.0
 	github.com/tevino/abool v0.0.0-20170917061928-9b9efcf221b5
 	github.com/urfave/cli v1.22.4
 	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37
