@@ -55,7 +55,7 @@ require (
 	github.com/prometheus/common v0.10.0 // indirect
 	github.com/rs/zerolog v1.18.0
 	github.com/russross/meddler v1.0.0
-	github.com/sirupsen/logrus v1.6.0
+	github.com/sirupsen/logrus v1.8.1
 	github.com/sourcegraph/jsonrpc2 v0.0.0-20200429184054-15c2290dcb37
 	github.com/stretchr/objx v0.2.0 // indirect
 	github.com/stretchr/testify v1.5.1
